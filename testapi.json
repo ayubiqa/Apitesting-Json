@@ -1,0 +1,2513 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "976b710a-4b5c-46ad-8faa-524df37b3447",
+      "name": "New Collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2023-10-18T19:49:58.000Z",
+      "uid": "30601735-976b710a-4b5c-46ad-8faa-524df37b3447"
+    },
+    "item": [
+      {
+        "name": "Activities",
+        "item": [
+          {
+            "name": "[200]/api/v1/Activities",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "0e46571f-f552-4847-8d07-37c97b5b0806",
+                  "exec": [
+                    "if (pm.response.code !== 200) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Status code is 200\", function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "1164a0d8-07ba-4b72-9029-179b905ae5d2",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{baseURL}}/api/v1/Activities",
+                "host": [
+                  "{{baseURL}}"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "e2366806-27f5-42c5-ad65-e82cc0fbe9b0",
+                "name": "Succes",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [],
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 17:53:28 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "[\n    {\n        \"id\": 1,\n        \"title\": \"Activity 1\",\n        \"dueDate\": \"2023-10-18T18:53:28.8246488+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Activity 2\",\n        \"dueDate\": \"2023-10-18T19:53:28.8246512+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Activity 3\",\n        \"dueDate\": \"2023-10-18T20:53:28.8246516+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Activity 4\",\n        \"dueDate\": \"2023-10-18T21:53:28.8246518+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Activity 5\",\n        \"dueDate\": \"2023-10-18T22:53:28.8246521+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 6,\n        \"title\": \"Activity 6\",\n        \"dueDate\": \"2023-10-18T23:53:28.8246526+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 7,\n        \"title\": \"Activity 7\",\n        \"dueDate\": \"2023-10-19T00:53:28.8246529+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 8,\n        \"title\": \"Activity 8\",\n        \"dueDate\": \"2023-10-19T01:53:28.8246532+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 9,\n        \"title\": \"Activity 9\",\n        \"dueDate\": \"2023-10-19T02:53:28.8246535+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 10,\n        \"title\": \"Activity 10\",\n        \"dueDate\": \"2023-10-19T03:53:28.824654+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 11,\n        \"title\": \"Activity 11\",\n        \"dueDate\": \"2023-10-19T04:53:28.8246543+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 12,\n        \"title\": \"Activity 12\",\n        \"dueDate\": \"2023-10-19T05:53:28.8246546+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 13,\n        \"title\": \"Activity 13\",\n        \"dueDate\": \"2023-10-19T06:53:28.8246549+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 14,\n        \"title\": \"Activity 14\",\n        \"dueDate\": \"2023-10-19T07:53:28.8246551+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 15,\n        \"title\": \"Activity 15\",\n        \"dueDate\": \"2023-10-19T08:53:28.8246554+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 16,\n        \"title\": \"Activity 16\",\n        \"dueDate\": \"2023-10-19T09:53:28.8246557+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 17,\n        \"title\": \"Activity 17\",\n        \"dueDate\": \"2023-10-19T10:53:28.824656+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 18,\n        \"title\": \"Activity 18\",\n        \"dueDate\": \"2023-10-19T11:53:28.8246564+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 19,\n        \"title\": \"Activity 19\",\n        \"dueDate\": \"2023-10-19T12:53:28.8246567+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 20,\n        \"title\": \"Activity 20\",\n        \"dueDate\": \"2023-10-19T13:53:28.824657+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 21,\n        \"title\": \"Activity 21\",\n        \"dueDate\": \"2023-10-19T14:53:28.8246572+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 22,\n        \"title\": \"Activity 22\",\n        \"dueDate\": \"2023-10-19T15:53:28.8246575+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 23,\n        \"title\": \"Activity 23\",\n        \"dueDate\": \"2023-10-19T16:53:28.8246578+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 24,\n        \"title\": \"Activity 24\",\n        \"dueDate\": \"2023-10-19T17:53:28.8246581+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 25,\n        \"title\": \"Activity 25\",\n        \"dueDate\": \"2023-10-19T18:53:28.8246583+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 26,\n        \"title\": \"Activity 26\",\n        \"dueDate\": \"2023-10-19T19:53:28.8246586+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 27,\n        \"title\": \"Activity 27\",\n        \"dueDate\": \"2023-10-19T20:53:28.8246589+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 28,\n        \"title\": \"Activity 28\",\n        \"dueDate\": \"2023-10-19T21:53:28.8246592+00:00\",\n        \"completed\": true\n    },\n    {\n        \"id\": 29,\n        \"title\": \"Activity 29\",\n        \"dueDate\": \"2023-10-19T22:53:28.8246594+00:00\",\n        \"completed\": false\n    },\n    {\n        \"id\": 30,\n        \"title\": \"Activity 30\",\n        \"dueDate\": \"2023-10-19T23:53:28.8246597+00:00\",\n        \"completed\": true\n    }\n]",
+                "uid": "30601735-e2366806-27f5-42c5-ad65-e82cc0fbe9b0"
+              }
+            ],
+            "uid": "30601735-1164a0d8-07ba-4b72-9029-179b905ae5d2"
+          },
+          {
+            "name": "[200]/api/v1/Activities",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "4335c031-b4cd-49a9-aa71-161964f94bc0",
+                  "exec": [
+                    "const jsonData = pm.response.json();",
+                    "",
+                    "if (pm.response.code !== 200) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Test data type of the response\", () => {",
+                    "  pm.expect(jsonData.id).to.be.a(\"number\");",
+                    "  pm.expect(jsonData.title).to.be.an(\"string\");",
+                    "  pm.expect(jsonData.dueDate).to.be.a(\"string\");",
+                    "  pm.expect(jsonData.completed).to.be.a(\"boolean\")",
+                    "});",
+                    "",
+                    "pm.test(\"Status code is 200\", function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "196a4834-d7e7-47c8-855f-ca4414f68519",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "accept",
+                  "value": "text/plain; v=1.0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; v=1.0"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"id\":0,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:08:38.751Z\",\"completed\":true}"
+              },
+              "url": {
+                "raw": "{{baseURL}}/api/v1/Activities",
+                "host": [
+                  "{{baseURL}}"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "20c2fe38-4a3f-430c-ae3c-229abce4c50b",
+                "name": "Succes",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":0,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:08:38.751Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 18:40:20 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 0,\n    \"title\": \"string\",\n    \"dueDate\": \"2023-10-18T16:08:38.751Z\",\n    \"completed\": true\n}",
+                "uid": "30601735-20c2fe38-4a3f-430c-ae3c-229abce4c50b"
+              },
+              {
+                "id": "6ad74eba-76e5-45ab-85f3-543c57dda90b",
+                "name": "Id Contains Negative Value",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":-1,\"title\":\"string\",\"dueDate\":\"2023-11-18T16:08:38.751Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 18:40:52 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": -1,\n    \"title\": \"string\",\n    \"dueDate\": \"2023-11-18T16:08:38.751Z\",\n    \"completed\": true\n}",
+                "uid": "30601735-6ad74eba-76e5-45ab-85f3-543c57dda90b"
+              },
+              {
+                "id": "528faaf4-f48a-4e7b-9e0c-c2043e8e4ae7",
+                "name": "Completed Status True",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":0,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:08:38.751Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:33:59 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 0,\n    \"title\": \"string\",\n    \"dueDate\": \"2023-10-18T16:08:38.751Z\",\n    \"completed\": true\n}",
+                "uid": "30601735-528faaf4-f48a-4e7b-9e0c-c2043e8e4ae7"
+              },
+              {
+                "id": "182bedfb-0383-46a6-bc23-b57c2a21c7cc",
+                "name": "Completed Status False",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":0,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:08:38.751Z\",\"completed\":false}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:34:22 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 0,\n    \"title\": \"string\",\n    \"dueDate\": \"2023-10-18T16:08:38.751Z\",\n    \"completed\": false\n}",
+                "uid": "30601735-182bedfb-0383-46a6-bc23-b57c2a21c7cc"
+              },
+              {
+                "id": "fb171b16-60bc-4b47-a5b1-885ad5962365",
+                "name": "Title is Empty",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":0,\"title\":\"\",\"dueDate\":\"2023-10-18T16:08:38.751Z\",\"completed\":false}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:34:47 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 0,\n    \"title\": \"\",\n    \"dueDate\": \"2023-10-18T16:08:38.751Z\",\n    \"completed\": false\n}",
+                "uid": "30601735-fb171b16-60bc-4b47-a5b1-885ad5962365"
+              }
+            ],
+            "uid": "30601735-196a4834-d7e7-47c8-855f-ca4414f68519"
+          },
+          {
+            "name": "[400]/api/v1/Activities",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "4335c031-b4cd-49a9-aa71-161964f94bc0",
+                  "exec": [
+                    "const jsonData = pm.response.json();",
+                    "let title = \"One or more validation errors occurred.\"",
+                    "",
+                    "if (pm.response.code !== 400) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Test data type of the response\", () => {",
+                    "  pm.expect(jsonData.type).to.be.a(\"string\");",
+                    "  pm.expect(jsonData.title).to.be.an(\"string\");",
+                    "  pm.expect(jsonData.status).to.be.a(\"number\");",
+                    "  pm.expect(jsonData.traceId).to.be.a(\"string\");",
+                    "});",
+                    "",
+                    "pm.test(\"Status code is 400\", function () {",
+                    "    pm.response.to.have.status(400);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});",
+                    "",
+                    "pm.test(\"Validation Message\", function () {",
+                    "    if (jsonData.title !== title){",
+                    "        pm.expect(title).to.true;",
+                    "    }",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "868953e8-9770-4de6-bd22-c9696d100b1c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "accept",
+                  "value": "text/plain; v=1.0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; v=1.0"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"id\":,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:08:38.751Z\",\"completed\":true}"
+              },
+              "url": {
+                "raw": "{{baseURL}}/api/v1/Activities",
+                "host": [
+                  "{{baseURL}}"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "46d5ae77-4669-425c-9292-a041e4c94750",
+                "name": "id is Empty",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:08:38.751Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 18:38:13 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-1341dc6932276640a01371a6e568b80f-acf7cfc9319b5d4f-00\",\n    \"errors\": {\n        \"$.id\": [\n            \"',' is an invalid start of a value. Path: $.id | LineNumber: 0 | BytePositionInLine: 6.\"\n        ]\n    }\n}",
+                "uid": "30601735-46d5ae77-4669-425c-9292-a041e4c94750"
+              },
+              {
+                "id": "9e8937c0-e10b-4afb-9ca3-ba0bdcb4a41b",
+                "name": "dueDate is Empty",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":0,\"title\":\"string\",\"dueDate\":\"\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 17:44:10 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-c5cf32ca058fe54bba710b54b9593033-10a586929d5b6948-00\",\n    \"errors\": {\n        \"$.dueDate\": [\n            \"The JSON value could not be converted to System.DateTime. Path: $.dueDate | LineNumber: 0 | BytePositionInLine: 37.\"\n        ]\n    }\n}",
+                "uid": "30601735-9e8937c0-e10b-4afb-9ca3-ba0bdcb4a41b"
+              },
+              {
+                "id": "0e801deb-00d9-47e6-a07b-d88a1c7e69a8",
+                "name": "dueDate is Wrong Format",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":,\"title\":\"string\",\"dueDate\":\"2023-30-18T16:08:38.751Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 17:54:50 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-643f4c3f5162eb439daf971ea6ca59fa-47cdb2fa0cc2f340-00\",\n    \"errors\": {\n        \"$.id\": [\n            \"',' is an invalid start of a value. Path: $.id | LineNumber: 0 | BytePositionInLine: 6.\"\n        ]\n    }\n}",
+                "uid": "30601735-0e801deb-00d9-47e6-a07b-d88a1c7e69a8"
+              },
+              {
+                "id": "f0d94bb1-dfb5-4dd2-868b-f9118881ff86",
+                "name": "Title Data Type is Unvalid",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":0,\"title\":11,\"dueDate\":\"2023-10-18T16:08:38.751Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 17:44:52 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-71dbb378ba00a14da6378e11fadf9325-28c8b9cd50c91244-00\",\n    \"errors\": {\n        \"$.title\": [\n            \"The JSON value could not be converted to System.String. Path: $.title | LineNumber: 0 | BytePositionInLine: 18.\"\n        ]\n    }\n}",
+                "uid": "30601735-f0d94bb1-dfb5-4dd2-868b-f9118881ff86"
+              },
+              {
+                "id": "30efe98f-bc42-4093-8a04-6eec55b87669",
+                "name": "Completed Status is Empty",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:08:38.751Z\",\"completed\":}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 17:43:40 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-0daa746cbd56e74588700e919d70d1cd-c36c1e7f24e7f748-00\",\n    \"errors\": {\n        \"$.id\": [\n            \"',' is an invalid start of a value. Path: $.id | LineNumber: 0 | BytePositionInLine: 6.\"\n        ]\n    }\n}",
+                "uid": "30601735-30efe98f-bc42-4093-8a04-6eec55b87669"
+              },
+              {
+                "id": "0414fbe7-6df6-441d-92e3-544e89669ee1",
+                "name": "Completed Data Type is Unvalid",
+                "originalRequest": {
+                  "method": "POST",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":,\"title\":\"string\",\"dueDate\":\"2023-3-18T16:08:38.751Z\",\"completed\":\"true\"}"
+                  },
+                  "url": {
+                    "raw": "{{baseURL}}/api/v1/Activities",
+                    "host": [
+                      "{{baseURL}}"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 17:56:05 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-e56bfb8747345747a305ed304dd33d2d-cc3c123f93066b4d-00\",\n    \"errors\": {\n        \"$.id\": [\n            \"',' is an invalid start of a value. Path: $.id | LineNumber: 0 | BytePositionInLine: 6.\"\n        ]\n    }\n}",
+                "uid": "30601735-0414fbe7-6df6-441d-92e3-544e89669ee1"
+              }
+            ],
+            "uid": "30601735-868953e8-9770-4de6-bd22-c9696d100b1c"
+          },
+          {
+            "name": "[200]/api/v1/Activities/{id}",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "5fd281e9-3ee8-454b-8f7d-f100348978ed",
+                  "exec": [
+                    "if (pm.response.code !== 200) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Status code is 200\", function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "c022fa6b-604c-42f1-b1bb-fa7236b57381",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "accept",
+                  "value": "text/plain; v=1.0"
+                }
+              ],
+              "url": {
+                "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                "protocol": "https",
+                "host": [
+                  "fakerestapi",
+                  "azurewebsites",
+                  "net"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities",
+                  "1"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "038f20b9-c0d1-46dc-affa-4bbcc735e071",
+                "name": "Succes",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    }
+                  ],
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 18:01:06 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 1,\n    \"title\": \"Activity 1\",\n    \"dueDate\": \"2023-10-18T19:01:07.3484938+00:00\",\n    \"completed\": false\n}",
+                "uid": "30601735-038f20b9-c0d1-46dc-affa-4bbcc735e071"
+              }
+            ],
+            "uid": "30601735-c022fa6b-604c-42f1-b1bb-fa7236b57381"
+          },
+          {
+            "name": "[400]/api/v1/Activities/{id}",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "5fd281e9-3ee8-454b-8f7d-f100348978ed",
+                  "exec": [
+                    "const jsonData = pm.response.json();",
+                    "let title = \"One or more validation errors occurred.\"",
+                    "",
+                    "if (pm.response.code !== 400) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Test data type of the response\", () => {",
+                    "  pm.expect(jsonData.type).to.be.a(\"string\");",
+                    "  pm.expect(jsonData.title).to.be.an(\"string\");",
+                    "  pm.expect(jsonData.status).to.be.a(\"number\");",
+                    "  pm.expect(jsonData.traceId).to.be.a(\"string\");",
+                    "});",
+                    "",
+                    "pm.test(\"Status code is 400\", function () {",
+                    "    pm.response.to.have.status(400);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});",
+                    "",
+                    "pm.test(\"Validation Message\", function () {",
+                    "    if (jsonData.title !== title){",
+                    "        pm.expect(title).to.true;",
+                    "    }",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "4dbc67cd-46b8-4a9d-aad3-e2219a5a2c22",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "accept",
+                  "value": "text/plain; v=1.0"
+                }
+              ],
+              "url": {
+                "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/-",
+                "protocol": "https",
+                "host": [
+                  "fakerestapi",
+                  "azurewebsites",
+                  "net"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities",
+                  "-"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "98d362ff-b80f-4e78-a942-0011903e0bdd",
+                "name": "id Data Type Unvalid",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    }
+                  ],
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/-",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "-"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 18:52:02 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-3c5e4c5b1eee6c4c80190be2d4b735d3-633294b949eb9040-00\",\n    \"errors\": {\n        \"id\": [\n            \"The value '-' is not valid.\"\n        ]\n    }\n}",
+                "uid": "30601735-98d362ff-b80f-4e78-a942-0011903e0bdd"
+              }
+            ],
+            "uid": "30601735-4dbc67cd-46b8-4a9d-aad3-e2219a5a2c22"
+          },
+          {
+            "name": "[404]/api/v1/Activities/{id}",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "5fd281e9-3ee8-454b-8f7d-f100348978ed",
+                  "exec": [
+                    "const jsonData = pm.response.json();",
+                    "let title = \"Not Found\"",
+                    "",
+                    "if (pm.response.code !== 404) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Test data type of the response\", () => {",
+                    "  pm.expect(jsonData.type).to.be.a(\"string\");",
+                    "  pm.expect(jsonData.title).to.be.an(\"string\");",
+                    "  pm.expect(jsonData.status).to.be.a(\"number\");",
+                    "  pm.expect(jsonData.traceId).to.be.a(\"string\")",
+                    "});",
+                    "",
+                    "pm.test(\"Status code is 404\", function () {",
+                    "    pm.response.to.have.status(404);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});",
+                    "",
+                    "pm.test(\"Validation Message\", function () {",
+                    "    if (jsonData.title !== title){",
+                    "        pm.expect(title).to.true;",
+                    "    }",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "6187184b-840f-411e-a3ae-2f9e8ae89d18",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "accept",
+                  "value": "text/plain; v=1.0"
+                }
+              ],
+              "url": {
+                "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/100",
+                "protocol": "https",
+                "host": [
+                  "fakerestapi",
+                  "azurewebsites",
+                  "net"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities",
+                  "100"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "2a4df9ee-9118-47bb-a1c1-90162afb019c",
+                "name": "Id is Not Found",
+                "originalRequest": {
+                  "method": "GET",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    }
+                  ],
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/100",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "100"
+                    ]
+                  }
+                },
+                "status": "Not Found",
+                "code": 404,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 18:02:49 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-8ca03ac5a8ee154fb9f4c833cdfcb519-b4cd9bc30f2fba45-00\"\n}",
+                "uid": "30601735-2a4df9ee-9118-47bb-a1c1-90162afb019c"
+              }
+            ],
+            "uid": "30601735-6187184b-840f-411e-a3ae-2f9e8ae89d18"
+          },
+          {
+            "name": "[200]/api/v1/Activities/{id}",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "6467a3ea-f160-4390-b56a-807141e78e50",
+                  "exec": [
+                    "const jsonData = pm.response.json();",
+                    "",
+                    "if (pm.response.code !== 200) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Test data type of the response\", () => {",
+                    "  pm.expect(jsonData.id).to.be.a(\"number\");",
+                    "  pm.expect(jsonData.title).to.be.an(\"string\");",
+                    "  pm.expect(jsonData.dueDate).to.be.a(\"string\");",
+                    "  pm.expect(jsonData.completed).to.be.a(\"boolean\")",
+                    "});",
+                    "",
+                    "pm.test(\"Status code is 200\", function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "94f1d2bb-0ba0-4199-a5c6-0be95f336cda",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "accept",
+                  "value": "text/plain; v=1.0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; v=1.0"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"id\":1,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+              },
+              "url": {
+                "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                "protocol": "https",
+                "host": [
+                  "fakerestapi",
+                  "azurewebsites",
+                  "net"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities",
+                  "1"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "7c135f5e-83ac-4771-850b-94b57ebba864",
+                "name": "Different Id",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":0,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 18:57:25 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 0,\n    \"title\": \"string\",\n    \"dueDate\": \"2023-10-18T16:14:42.99Z\",\n    \"completed\": true\n}",
+                "uid": "30601735-7c135f5e-83ac-4771-850b-94b57ebba864"
+              },
+              {
+                "id": "db4f913f-cf0b-4e04-af40-43601ece3b6e",
+                "name": "Same Id",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":1,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:27:40 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 1,\n    \"title\": \"string\",\n    \"dueDate\": \"2023-10-18T16:14:42.99Z\",\n    \"completed\": true\n}",
+                "uid": "30601735-db4f913f-cf0b-4e04-af40-43601ece3b6e"
+              },
+              {
+                "id": "60e43bef-3002-486c-890b-8d817cbc7b39",
+                "name": "id Contains Negative Value",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":-1,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 18:56:50 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": -1,\n    \"title\": \"string\",\n    \"dueDate\": \"2023-10-18T16:14:42.99Z\",\n    \"completed\": true\n}",
+                "uid": "30601735-60e43bef-3002-486c-890b-8d817cbc7b39"
+              },
+              {
+                "id": "d6bd6acf-b4e7-4868-9e56-16e96129fa1f",
+                "name": "Completed Status False",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":1,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":false}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:30:57 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 1,\n    \"title\": \"string\",\n    \"dueDate\": \"2023-10-18T16:14:42.99Z\",\n    \"completed\": false\n}",
+                "uid": "30601735-d6bd6acf-b4e7-4868-9e56-16e96129fa1f"
+              },
+              {
+                "id": "7437d370-8649-4a74-bf26-9aaaed7b1e8c",
+                "name": "Completed Status True",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":1,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:31:23 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 1,\n    \"title\": \"string\",\n    \"dueDate\": \"2023-10-18T16:14:42.99Z\",\n    \"completed\": true\n}",
+                "uid": "30601735-7437d370-8649-4a74-bf26-9aaaed7b1e8c"
+              },
+              {
+                "id": "2c942e4c-6824-4913-85f8-c7579c536cf2",
+                "name": "Title is Empty",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":1,\"title\":\"\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json; charset=utf-8; v=1.0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:31:52 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"id\": 1,\n    \"title\": \"\",\n    \"dueDate\": \"2023-10-18T16:14:42.99Z\",\n    \"completed\": true\n}",
+                "uid": "30601735-2c942e4c-6824-4913-85f8-c7579c536cf2"
+              }
+            ],
+            "uid": "30601735-94f1d2bb-0ba0-4199-a5c6-0be95f336cda"
+          },
+          {
+            "name": "[400]/api/v1/Activities/{id}",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "6467a3ea-f160-4390-b56a-807141e78e50",
+                  "exec": [
+                    "const jsonData = pm.response.json();",
+                    "let title = \"One or more validation errors occurred.\"",
+                    "",
+                    "if (pm.response.code !== 400) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Test data type of the response\", () => {",
+                    "  pm.expect(jsonData.type).to.be.a(\"string\");",
+                    "  pm.expect(jsonData.title).to.be.an(\"string\");",
+                    "  pm.expect(jsonData.status).to.be.a(\"number\");",
+                    "  pm.expect(jsonData.traceId).to.be.a(\"string\");",
+                    "});",
+                    "",
+                    "pm.test(\"Status code is 400\", function () {",
+                    "    pm.response.to.have.status(400);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});",
+                    "",
+                    "pm.test(\"Validation Message\", function () {",
+                    "    if (jsonData.title !== title){",
+                    "        pm.expect(title).to.true;",
+                    "    }",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "dbb3a0d3-9e4d-4579-b90a-95092cd45c2a",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "accept",
+                  "value": "text/plain; v=1.0"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; v=1.0"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\"id\":,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+              },
+              "url": {
+                "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                "protocol": "https",
+                "host": [
+                  "fakerestapi",
+                  "azurewebsites",
+                  "net"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities",
+                  "1"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "7928ee35-bce3-4119-9fab-695c79b88f1c",
+                "name": "id is Empty",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:19:34 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-67a07a5a33a1cf4bb229e9cdda259bfc-d7df6f1ef2f90f41-00\",\n    \"errors\": {\n        \"$.id\": [\n            \"',' is an invalid start of a value. Path: $.id | LineNumber: 0 | BytePositionInLine: 6.\"\n        ]\n    }\n}",
+                "uid": "30601735-7928ee35-bce3-4119-9fab-695c79b88f1c"
+              },
+              {
+                "id": "91c723c8-7555-460d-a073-e5c084c49946",
+                "name": "Title Data is Empty",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":1,\"title\":,\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:22:28 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-42c860e491429545aaabe387601a7e55-2d954b3ad5fc6648-00\",\n    \"errors\": {\n        \"$.title\": [\n            \"',' is an invalid start of a value. Path: $.title | LineNumber: 0 | BytePositionInLine: 16.\"\n        ]\n    }\n}",
+                "uid": "30601735-91c723c8-7555-460d-a073-e5c084c49946"
+              },
+              {
+                "id": "7f79a8af-a575-4445-a2df-a068806e66f0",
+                "name": "Title Data Type is Unvalid",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":1,\"title\":23,\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:23:13 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-299596743084d84badcf85f1996c6fde-8dd96628ed74fd43-00\",\n    \"errors\": {\n        \"$.title\": [\n            \"The JSON value could not be converted to System.String. Path: $.title | LineNumber: 0 | BytePositionInLine: 18.\"\n        ]\n    }\n}",
+                "uid": "30601735-7f79a8af-a575-4445-a2df-a068806e66f0"
+              },
+              {
+                "id": "b2cadf34-b0f3-4773-8bd3-cb7dc5ab8f67",
+                "name": "dueDate is Wrong Format",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":1,\"title\":\"string\",\"dueDate\":\"2023-30-18T16:14:42.990Z\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:23:51 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-66984a39de40de4b848a49685e57d083-68999d947d202645-00\",\n    \"errors\": {\n        \"$.dueDate\": [\n            \"The JSON value could not be converted to System.DateTime. Path: $.dueDate | LineNumber: 0 | BytePositionInLine: 61.\"\n        ]\n    }\n}",
+                "uid": "30601735-b2cadf34-b0f3-4773-8bd3-cb7dc5ab8f67"
+              },
+              {
+                "id": "ca647670-9477-45aa-a159-849a1a094d7f",
+                "name": "dueDate is Empty",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":1,\"title\":\"string\",\"dueDate\":\"\",\"completed\":true}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:24:29 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-9c13a2736b6eb94cb6a567f8c6c6c648-b2fd679e7bc3f046-00\",\n    \"errors\": {\n        \"$.dueDate\": [\n            \"The JSON value could not be converted to System.DateTime. Path: $.dueDate | LineNumber: 0 | BytePositionInLine: 37.\"\n        ]\n    }\n}",
+                "uid": "30601735-ca647670-9477-45aa-a159-849a1a094d7f"
+              },
+              {
+                "id": "fe8075d4-3d19-4e2a-9c4a-0afa707f2398",
+                "name": "Completed Data tyoe is Unvalid",
+                "originalRequest": {
+                  "method": "PUT",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "text/plain; v=1.0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; v=1.0"
+                    }
+                  ],
+                  "body": {
+                    "mode": "raw",
+                    "raw": "{\"id\":1,\"title\":\"string\",\"dueDate\":\"2023-10-18T16:14:42.990Z\",\"completed\":}"
+                  },
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:24:59 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-70f7f62f7ba2bb479291c29efe84c062-850ed48a221d3b44-00\",\n    \"errors\": {\n        \"$.completed\": [\n            \"'}' is an invalid start of a value. Path: $.completed | LineNumber: 0 | BytePositionInLine: 74.\"\n        ]\n    }\n}",
+                "uid": "30601735-fe8075d4-3d19-4e2a-9c4a-0afa707f2398"
+              }
+            ],
+            "uid": "30601735-dbb3a0d3-9e4d-4579-b90a-95092cd45c2a"
+          },
+          {
+            "name": "[200]/api/v1/Activities/{id}",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "2101e6e8-774c-4f0e-aed0-7a837a1f3b75",
+                  "exec": [
+                    "if (pm.response.code !== 200) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Status code is 200\", function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "963f3475-db13-4d3d-b884-f47f84e6fa14",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "accept",
+                  "value": "*/*"
+                }
+              ],
+              "url": {
+                "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                "protocol": "https",
+                "host": [
+                  "fakerestapi",
+                  "azurewebsites",
+                  "net"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities",
+                  "1"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "03fe1067-2fbd-4672-b4bd-4c051dff9e3f",
+                "name": "Unsucces Deleting",
+                "originalRequest": {
+                  "method": "DELETE",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "*/*"
+                    }
+                  ],
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "1"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "plain",
+                "header": [
+                  {
+                    "key": "Content-Length",
+                    "value": "0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:40:15 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": null,
+                "uid": "30601735-03fe1067-2fbd-4672-b4bd-4c051dff9e3f"
+              },
+              {
+                "id": "72c4b7d6-154b-4cc1-ae2f-d6592fa3cf4d",
+                "name": "Deleting Not Found Id",
+                "originalRequest": {
+                  "method": "DELETE",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "*/*"
+                    }
+                  ],
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/10000000",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "10000000"
+                    ]
+                  }
+                },
+                "status": "OK",
+                "code": 200,
+                "_postman_previewlanguage": "plain",
+                "header": [
+                  {
+                    "key": "Content-Length",
+                    "value": "0"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:41:14 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "api-supported-versions",
+                    "value": "1.0"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": null,
+                "uid": "30601735-72c4b7d6-154b-4cc1-ae2f-d6592fa3cf4d"
+              }
+            ],
+            "uid": "30601735-963f3475-db13-4d3d-b884-f47f84e6fa14"
+          },
+          {
+            "name": "[400]/api/v1/Activities/{id}",
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "2101e6e8-774c-4f0e-aed0-7a837a1f3b75",
+                  "exec": [
+                    "const jsonData = pm.response.json();",
+                    "let title = \"One or more validation errors occurred.\"",
+                    "",
+                    "if (pm.response.code !== 400) {",
+                    "    pm.test(\"Test failed\", function () {",
+                    "        pm.expect.fail('An error occurred');",
+                    "    });",
+                    "    return;",
+                    "}",
+                    "",
+                    "pm.test(\"Test data type of the response\", () => {",
+                    "  pm.expect(jsonData.type).to.be.a(\"string\");",
+                    "  pm.expect(jsonData.title).to.be.an(\"string\");",
+                    "  pm.expect(jsonData.status).to.be.a(\"number\");",
+                    "  pm.expect(jsonData.traceId).to.be.a(\"string\");",
+                    "});",
+                    "",
+                    "pm.test(\"Status code is 400\", function () {",
+                    "    pm.response.to.have.status(400);",
+                    "});",
+                    "",
+                    "pm.test(\"Response time is less than 300ms\", function () {",
+                    "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+                    "});",
+                    "",
+                    "pm.test(\"Validation Message\", function () {",
+                    "    if (jsonData.title !== title){",
+                    "        pm.expect(title).to.true;",
+                    "    }",
+                    "});"
+                  ],
+                  "type": "text/javascript"
+                }
+              }
+            ],
+            "id": "f77de70c-c40a-4140-9e6e-eb4f3956bd2e",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "accept",
+                  "value": "*/*"
+                }
+              ],
+              "url": {
+                "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/-",
+                "protocol": "https",
+                "host": [
+                  "fakerestapi",
+                  "azurewebsites",
+                  "net"
+                ],
+                "path": [
+                  "api",
+                  "v1",
+                  "Activities",
+                  "-"
+                ]
+              }
+            },
+            "response": [
+              {
+                "id": "58ee4196-babb-4976-bfd8-f47431e59e83",
+                "name": "id Data Type Invalid",
+                "originalRequest": {
+                  "method": "DELETE",
+                  "header": [
+                    {
+                      "key": "accept",
+                      "value": "*/*"
+                    }
+                  ],
+                  "url": {
+                    "raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/-",
+                    "protocol": "https",
+                    "host": [
+                      "fakerestapi",
+                      "azurewebsites",
+                      "net"
+                    ],
+                    "path": [
+                      "api",
+                      "v1",
+                      "Activities",
+                      "-"
+                    ]
+                  }
+                },
+                "status": "Bad Request",
+                "code": 400,
+                "_postman_previewlanguage": "json",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/problem+json; charset=utf-8"
+                  },
+                  {
+                    "key": "Date",
+                    "value": "Wed, 18 Oct 2023 19:44:45 GMT"
+                  },
+                  {
+                    "key": "Server",
+                    "value": "Kestrel"
+                  },
+                  {
+                    "key": "Transfer-Encoding",
+                    "value": "chunked"
+                  }
+                ],
+                "cookie": [],
+                "responseTime": null,
+                "body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-4b10ca04e619cd49b625169df57f456a-2b8a15d8dfde504e-00\",\n    \"errors\": {\n        \"id\": [\n            \"The value '-' is not valid.\"\n        ]\n    }\n}",
+                "uid": "30601735-58ee4196-babb-4976-bfd8-f47431e59e83"
+              }
+            ],
+            "uid": "30601735-f77de70c-c40a-4140-9e6e-eb4f3956bd2e"
+          },
+          {
+            "name": "New Request",
+            "id": "323ac897-58f8-4c9c-91e8-858a713a4000",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": []
+            },
+            "response": [],
+            "uid": "30601735-323ac897-58f8-4c9c-91e8-858a713a4000"
+          }
+        ],
+        "id": "22c16773-fecd-45a5-8d94-a0f731dad4ca",
+        "uid": "30601735-22c16773-fecd-45a5-8d94-a0f731dad4ca"
+      }
+    ]
+  }
+}
